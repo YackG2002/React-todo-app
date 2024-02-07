@@ -2,7 +2,7 @@
 FROM node:14-alpine AS build
 
 # Installer les outils nécessaires pour la construction
-RUN apk add --no-cache curl git npm pnpm
+RUN apk add --no-cache npm
 
 # Définir le répertoire de travail
 WORKDIR /app
