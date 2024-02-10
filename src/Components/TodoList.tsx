@@ -45,7 +45,7 @@ export const TodoList =  () => {
 
                 <input type="number" placeholder="Add Deadline (in day)" name="deadline" value={deadLine} onChange={handleChange} className="border rounded-lg h-8 border-slate-500 placeholder:text-center"/>
 
-                <button type="submit" onClick={addTask} className="border rounded-md p-3 border-slate-800">ADD</button>
+                <button type="submit" onClick={addTask} className="border rounded-md p-3 border-slate-800">ADD Task</button>
 
                 <button onClick={verifyIsComplete} className="border rounded-md p-3 border-slate-800">Done</button>
             </div>

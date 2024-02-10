@@ -1,9 +1,18 @@
 # Étape de construction de l'application Node.js
-FROM node:14-alpine AS build
+FROM node:14 AS build
 
 # Installer les outils nécessaires pour la construction
-RUN apk add --no-cache npm
+RUN apk add --no-cache npm@7.24.0
 
+# ... reste du Dockerfile ...
+# Étape de construction de l'application Node.js
+FROM node:14 AS build
+
+# Mettre à jour les informations de dépôt et installer npm
+#RUN apk update && apk add --no-cache npm
+
+# ... reste du Dockerfile ...
+# Étape de construction de l'application Node.js
 # Définir le répertoire de travail
 WORKDIR /app
 
