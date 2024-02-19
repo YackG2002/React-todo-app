@@ -1,12 +1,22 @@
 import React from "react";
-import { TodoList} from "./Components/TodoList";
+import { UserContextProvider } from "./learning_Components/Box/UserContext";
+import { User } from "./learning_Components/user";
+import { ThemeContextProvider } from "./learning_Components/Box/ThemeContext";
+import { Box } from "./learning_Components/Box/Box";
 
 export default function App() {
    return(<>
-   <div className="items-center justify-center text-center space-y-8 m-4">
-        <h3 className="font-extrabold text-2xl shadow-lg p-2 text-center">TODO LIST ✓ </h3>
-        <TodoList></TodoList>
-   </div>
+      <div className="App">
+         <ThemeContextProvider>
+            <Box/>
+         </ThemeContextProvider>
+      </div>
+
+      <div>
+         <UserContextProvider>
+            <User/>
+         </UserContextProvider>
+      </div>
    </>)
 
 }
